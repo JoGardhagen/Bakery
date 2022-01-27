@@ -4,8 +4,14 @@ public class WigelsBakery extends Bakery{
 
 	@Override
 	Cakes createCake(String item) {
-		
-		return new princessCake();
+		if(item.equals("Princess Cake")) {
+			return new princessCake();
+		}
+		if(item.equals("Shrovetide Bun")) {
+			return new ShrovetideBun();
+		}
+		return null;
+			
 	}
 
 }

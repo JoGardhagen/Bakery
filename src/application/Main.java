@@ -15,7 +15,9 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		WigelsBakery wb = new WigelsBakery();
 		Cakes cake = wb.orderCake("Princess Cake");
-		System.out.println(cake.getName());
+		System.out.println(cake.getName()+"\n\n");
+		Cakes cake2 = wb.orderCake("Shrovetide Bun");
+		System.out.println(cake2.getName());
 		launch(args);
 	}
 	@Override
