@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="514.0" prefWidth="483.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
    <children>
       <RadioButton fx:id="PrincessCake" layoutX="94.0" layoutY="104.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="128.0" text="Princess-Cake">
@@ -13,7 +12,7 @@
             <Font size="14.0" />
          </font>
       </RadioButton>
-      <RadioButton fx:id="LavaCake" layoutX="94.0" layoutY="139.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="112.0" text="Lava-Cake">
+      <RadioButton fx:id="ChoclateCake" layoutX="94.0" layoutY="139.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="166.0" text="Choclate Cake">
          <font>
             <Font size="14.0" />
          </font>

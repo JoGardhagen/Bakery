@@ -10,6 +10,8 @@ public class WigelsBakery extends Bakery{
 		if(item.equals("Shrovetide Bun")) {
 			return new ShrovetideBun();
 		}
+		if(item.equals("Choclate Cake"))
+			return new ChoclateCake();
 		return null;
 			
 	}

@@ -17,7 +17,10 @@ public class Main extends Application {
 		Cakes cake = wb.orderCake("Princess Cake");
 		System.out.println(cake.getName()+"\n\n");
 		Cakes cake2 = wb.orderCake("Shrovetide Bun");
-		System.out.println(cake2.getName());
+		System.out.println(cake2.getName()+"\n\n");
+		Cakes cake3 = wb.orderCake("Choclate Cake");
+		System.out.println(cake3.getName());
+		
 		launch(args);
 	}
 	@Override
