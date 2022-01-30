@@ -5,10 +5,9 @@ import java.util.List;
 
 import com.gardhagen.joakim.customer.Customer;
 import com.gardhagen.joakim.customer.Message;
-import com.gardhagen.joakim.customer.Subject;
 
-public class WigelsBakery extends Bakery implements Subject{
-	Message msg = new Message(null);
+public class WigelsBakery extends Bakery {
+	Message msg = new Message();
 	private List<Customer> customerList = new ArrayList<>();
 	@Override
 	Cakes createCake(String item) {
@@ -25,28 +24,16 @@ public class WigelsBakery extends Bakery implements Subject{
 			return new ChoclateCake();
 		}
 		msg.setMessage(null);
-		return null;
-			
+		return null;	
 	}
-
-	@Override
-	public void attach(Customer o) {
-		customerList.add(o);
-		
-	}
-
-	@Override
-	public void detach(Customer o) {
-		customerList.remove(o);
-		
-	}
-
-	@Override
-	public void notifyUpdate(Message msg) {
-		for(Customer c :customerList) {
-			c.update(msg);
+	public void printCustomerList() {
+		for(Customer cust:customerList) {
+			System.out.println(cust.getName());
 		}
-		
 	}
+	public void addCustomerToList(Customer customer) {
+		customerList.add(customer);
+	}
+	
 
 }

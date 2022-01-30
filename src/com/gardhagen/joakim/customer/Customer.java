@@ -1,6 +1,6 @@
 package com.gardhagen.joakim.customer;
 
-public class Customer implements Observer{
+public class Customer {
 	private String name;
 	
 	public Customer(String name) {
@@ -16,9 +16,9 @@ public class Customer implements Observer{
 		this.name = string;
 	}
 
-	@Override
-	public void update(Message msg) {
-		System.out.println("Message is : " + msg.getMessage());
-		
-	}
+//	@Override
+//	public void update(Message msg) {
+//		System.out.println("Message is : " + msg.getMessage());
+//		
+//	}
 }

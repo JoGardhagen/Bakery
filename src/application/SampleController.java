@@ -28,8 +28,7 @@ public class SampleController {
 	public void orderBtnClicked() throws InterruptedException {
 		String custName = customerField.getText();
 		Customer cust = new Customer(custName);
-		wb.attach(cust);
-		
+		wb.addCustomerToList(cust);
 		if(PrincessCake.isSelected()) {
 		
 			Cakes cake = wb.orderCake("Princess Cake");
@@ -48,9 +47,8 @@ public class SampleController {
 			System.out.println(cake.getName()+" "+cust.getName()+"\n\n");
 			orderLable.setText(cust.getName() + " Ordered "+ cake.getName());
 		}
-//		Thread.sleep(200);
-//		wb.notifyAll();
-		
+		wb.printCustomerList();
+				
 	}
 	
 	
