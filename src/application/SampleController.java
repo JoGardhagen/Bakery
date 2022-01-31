@@ -1,5 +1,6 @@
 package application;
 
+import com.gardhagen.joakim.bakery.cakes.BakeingCake;
 import com.gardhagen.joakim.bakery.cakes.Cakes;
 import com.gardhagen.joakim.bakery.cakes.WigelsBakery;
 import com.gardhagen.joakim.customer.Customer;
@@ -34,6 +35,8 @@ public class SampleController {
 			Cakes cake = wb.orderCake("Princess Cake");
 			System.out.println(cake.getName()+" "+cust.getName()+"\n\n");
 			orderLable.setText(cust.getName() + " Ordered "+ cake.getName());
+			BakeingCake bake = new BakeingCake();
+			bake.execute(cake);	
 		}
 		if(ChoclateCake.isSelected()) {
 		
@@ -48,7 +51,7 @@ public class SampleController {
 			orderLable.setText(cust.getName() + " Ordered "+ cake.getName());
 		}
 		wb.printCustomerList();
-				
+		
 	}
 	
 	

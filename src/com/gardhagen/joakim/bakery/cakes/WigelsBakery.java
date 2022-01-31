@@ -14,6 +14,7 @@ public class WigelsBakery extends Bakery {
 		if(item.equals("Princess Cake")) {
 			msg.setMessage(item);
 			return new princessCake();
+			
 		}
 		if(item.equals("Shrovetide Bun")) {
 			msg.setMessage(item);
