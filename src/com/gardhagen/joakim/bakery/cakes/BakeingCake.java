@@ -9,7 +9,7 @@ import com.gardhagen.joakim.bakery.bakingCommand.commands.PrepareCakeBase;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.WhipThaCream;
 
 public class BakeingCake implements Command {
-
+// här ska det ändras om helt o hållet
 	@Override
 	public void execute(Cakes cake) {
 		boolean done = false;
