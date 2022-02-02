@@ -12,6 +12,7 @@ public class ChoclateCake extends Cakes{
 		ingredients.add("Cacao");
 		ingredients.add("Vanilla Suger");
 		ingredients.add("Salt");
+		ingredients.add("Icing Suger");
 		
 		
 	}

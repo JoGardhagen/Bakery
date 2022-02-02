@@ -32,20 +32,20 @@ public class SampleController {
 		if(PrincessCake.isSelected()) {
 		
 			Cakes cake = wb.orderCake("Princess Cake");
-			System.out.println(cake.getName()+" "+cust.getName()+"\n\n");
+//			System.out.println(cake.getName()+" "+cust.getName()+"\n\n");
 			orderLable.setText(cust.getName() + " Ordered "+ cake.getName());
 			
 		}
 		if(ChoclateCake.isSelected()) {
 		
 			Cakes cake = wb.orderCake("Choclate Cake");
-			System.out.println(cake.getName()+" "+cust.getName()+"\n\n");
+//			System.out.println(cake.getName()+" "+cust.getName()+"\n\n");
 			orderLable.setText(cust.getName() + " Ordered "+ cake.getName());
 		}
 		if(ShrovetideBun.isSelected()) {
 			
 			Cakes cake = wb.orderCake("Shrovetide Bun");
-			System.out.println(cake.getName()+" "+cust.getName()+"\n\n");
+//			System.out.println(cake.getName()+" "+cust.getName()+"\n\n");
 			orderLable.setText(cust.getName() + " Ordered "+ cake.getName());
 		}
 		wb.printCustomerList();
