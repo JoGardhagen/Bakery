@@ -1,5 +1,8 @@
 package com.gardhagen.joakim.bakery.cakes;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.gardhagen.joakim.bakery.bakingCommand.BakingPipeline;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.AddMeltedButter;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.AddRestOfFlourAndDryIngrediens;
@@ -7,6 +10,7 @@ import com.gardhagen.joakim.bakery.bakingCommand.commands.ApplyMarzipanTop;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.ApplyRaspberryJam;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.ApplyVanillaCream;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.Bake175Degree;
+import com.gardhagen.joakim.bakery.bakingCommand.commands.BakingIsDone;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.BatterInMold;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.CakeBaselayer;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.CutBuns;
@@ -21,12 +25,12 @@ import com.gardhagen.joakim.bakery.bakingCommand.commands.PrepareMilkAndGeast;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.SprinkleADollopOfCream;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.WhipThaCream;
 
-public class BakeingCake implements Command {
-	
-	@Override
+public class BakeingCake implements Command{
+	@Override 
 	public void execute(Cakes cake) {
 		
 		BakingPipeline baking = new BakingPipeline();
+		
 		if(cake.name.equals("Princess Cake")) {
 			baking.addCommand(new WhipThaCream());
 			baking.addCommand(new PrepareCakeBase());
@@ -37,6 +41,7 @@ public class BakeingCake implements Command {
 			baking.addCommand(new ApplyMarzipanTop());
 			baking.addCommand(new MarzipanRose());
 			baking.addCommand(new IcingSuger());
+//			baking.addCommand(new BakingIsDone());
 		}
 		if(cake.name.equals("Choclate Cake")) {
 			baking.addCommand(new MeltButter());

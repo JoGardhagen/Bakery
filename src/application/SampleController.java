@@ -19,9 +19,10 @@ public class SampleController {
 	@FXML
 	private TextField customerField;
 	@FXML
-	private Label orderLable;
+	private Label orderLable,orderIsDoneLabel;
 	
 	WigelsBakery wb = new WigelsBakery();// frabrik Instance för bageriet
+	String cakeDone = "Cake is now done,";
 	public void orderNow(ActionEvent event) throws InterruptedException {
 		orderBtnClicked();
 	}
@@ -32,8 +33,14 @@ public class SampleController {
 		if(PrincessCake.isSelected()) {
 		
 			Cakes cake = wb.orderCake("Princess Cake");
+//			wb.attach(wb.);
 //			System.out.println(cake.getName()+" "+cust.getName()+"\n\n");
 			orderLable.setText(cust.getName() + " Ordered "+ cake.getName());
+//			orderLable.setText(BakingPipeline.super().cake.);
+			if(cake.isBaked()) {
+				wb.notifyUpdate(cakeDone);
+				orderIsDoneLabel.setText(wb.VD.message+" "+cake.getName());
+			}
 			
 		}
 		if(ChoclateCake.isSelected()) {
@@ -41,13 +48,22 @@ public class SampleController {
 			Cakes cake = wb.orderCake("Choclate Cake");
 //			System.out.println(cake.getName()+" "+cust.getName()+"\n\n");
 			orderLable.setText(cust.getName() + " Ordered "+ cake.getName());
+			if(cake.isBaked()) {
+				wb.notifyUpdate(cakeDone);	
+				orderIsDoneLabel.setText(wb.VD.message+" "+cake.getName());
+			}
 		}
 		if(ShrovetideBun.isSelected()) {
 			
 			Cakes cake = wb.orderCake("Shrovetide Bun");
 //			System.out.println(cake.getName()+" "+cust.getName()+"\n\n");
 			orderLable.setText(cust.getName() + " Ordered "+ cake.getName());
+			if(cake.isBaked()) {
+				wb.notifyUpdate(cakeDone);
+				orderIsDoneLabel.setText(wb.VD.message+" "+cake.getName());
+			}
 		}
+	
 		wb.printCustomerList();
 		
 	}
