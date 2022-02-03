@@ -14,8 +14,8 @@ public class WigelsBakery extends Bakery implements Subject {
 	
 	@Override
 	Cakes createCake(String item) {
-		attach(VD); 
-		if(item.equals("Princess Cake")) {
+		attach(VD); // lägger in VDn i Listan för att kunna notera inom Observer Mönstret
+		if(item.equals("Princess Cake")) { 
 			
 			return new princessCake();
 		}

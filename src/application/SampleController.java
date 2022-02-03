@@ -21,47 +21,47 @@ public class SampleController {
 	@FXML
 	private Label orderLable, orderIsDoneLabel;
 
-	WigelsBakery wb = new WigelsBakery();// frabrik Instance för bageriet
+	WigelsBakery wigelsBakery = new WigelsBakery();// frabrik Instance för bageriet
 	String cakeDone = "Cake is now done,";
 
 	public void orderNow(ActionEvent event) throws InterruptedException {
 		orderBtnClicked();
 	}
-
+	// när användaren har valt 1 av 3 alternativ och tryckt på knappen anropas denna method:
 	public void orderBtnClicked() throws InterruptedException {
-		String custName = customerField.getText();
-		Customer cust = new Customer(custName);
-		wb.addCustomerToList(cust);
+		String custName = customerField.getText();// sparar det användaren har skrivit in som kund;
+		Customer cust = new Customer(custName);// skapar en kund med det sparade värdet
+		wigelsBakery.addCustomerToList(cust);// lägger in kunden i en kund lista 
 		if (PrincessCake.isSelected()) {
-
-			Cakes cake = wb.orderCake("Princess Cake");
+			
+			Cakes cake = wigelsBakery.orderCake("Princess Cake");
 			orderLable.setText(cust.getName() + " Ordered " + cake.getName());
 			if (cake.isBaked()) {
-				wb.notifyUpdate(cakeDone);
-				orderIsDoneLabel.setText(wb.VD.message + " " + cake.getName() + ", " + cust.getName());
+				wigelsBakery.notifyUpdate(cakeDone);//tillhör Observer Mönstret
+				orderIsDoneLabel.setText(wigelsBakery.VD.message + " " + cake.getName() + ", " + cust.getName());
 			}
 
 		}
 		if (ChoclateCake.isSelected()) {
 
-			Cakes cake = wb.orderCake("Choclate Cake");
+			Cakes cake = wigelsBakery.orderCake("Choclate Cake");
 			orderLable.setText(cust.getName() + " Ordered " + cake.getName());
 			if (cake.isBaked()) {
-				wb.notifyUpdate(cakeDone);
-				orderIsDoneLabel.setText(wb.VD.message + " " + cake.getName() + ", " + cust.getName());
+				wigelsBakery.notifyUpdate(cakeDone);//tillhör Observer Mönstret
+				orderIsDoneLabel.setText(wigelsBakery.VD.message + " " + cake.getName() + ", " + cust.getName());
 			}
 		}
 		if (ShrovetideBun.isSelected()) {
 
-			Cakes cake = wb.orderCake("Shrovetide Bun");
+			Cakes cake = wigelsBakery.orderCake("Shrovetide Bun");
 			orderLable.setText(cust.getName() + " Ordered " + cake.getName());
 			if (cake.isBaked()) {
-				wb.notifyUpdate(cakeDone);
-				orderIsDoneLabel.setText(wb.VD.message + " " + cake.getName() + ", " + cust.getName());
+				wigelsBakery.notifyUpdate(cakeDone);//tillhör Observer Mönstret
+				orderIsDoneLabel.setText(wigelsBakery.VD.message + " " + cake.getName() + ", " + cust.getName());
 			}
 		}
-
-		wb.printCustomerList();
+		// skriver ut kunder från listan, kommentera in om man vill ha den
+//		wigelsBakery.printCustomerList();
 
 	}
 

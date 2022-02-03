@@ -8,7 +8,7 @@ public abstract class Bakery {// abstarct fabrik detta ärvs av WigelsBakery klas
 		cake = createCake(type);// väljer ut kaka som skall bakas
 		
 		bake.execute(cake);	// Anropar att exekvera kaka för att bakas 
-		if(cake.isBaked()==true) { 
+		if(cake.isBaked()==true) {  // om han går igenom skpandet av Kakan i Commando mönstret retuneras kakan till main 
 			return cake;
 		}
 		return null;

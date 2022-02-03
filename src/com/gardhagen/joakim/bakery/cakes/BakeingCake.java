@@ -33,7 +33,7 @@ public class BakeingCake implements Command{
 			baking.addCommand(new ApplyRaspberryJam());
 			baking.addCommand(new CakeBaselayer());
 			baking.addCommand(new ApplyVanillaCream());
-			baking.addCommand(new PortionOutWhippedCream());
+			baking.addCommand(new PortionOutWhippedCream()); 
 			baking.addCommand(new ApplyMarzipanTop());
 			baking.addCommand(new MarzipanRose());
 			baking.addCommand(new IcingSuger());
