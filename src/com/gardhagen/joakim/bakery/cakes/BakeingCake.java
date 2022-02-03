@@ -1,21 +1,31 @@
 package com.gardhagen.joakim.bakery.cakes;
 
 import com.gardhagen.joakim.bakery.bakingCommand.BakingPipeline;
+import com.gardhagen.joakim.bakery.bakingCommand.commands.AddMeltedButter;
+import com.gardhagen.joakim.bakery.bakingCommand.commands.AddRestOfFlourAndDryIngrediens;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.ApplyMarzipanTop;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.ApplyRaspberryJam;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.ApplyVanillaCream;
+import com.gardhagen.joakim.bakery.bakingCommand.commands.Bake175Degree;
+import com.gardhagen.joakim.bakery.bakingCommand.commands.BatterInMold;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.CakeBaselayer;
+import com.gardhagen.joakim.bakery.bakingCommand.commands.CutBuns;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.IcingSuger;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.MarzipanRose;
+import com.gardhagen.joakim.bakery.bakingCommand.commands.MeltButter;
+import com.gardhagen.joakim.bakery.bakingCommand.commands.MixDryIngredients;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.PortionOutWhippedCream;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.PrepareCakeBase;
+import com.gardhagen.joakim.bakery.bakingCommand.commands.PrepareDough;
+import com.gardhagen.joakim.bakery.bakingCommand.commands.PrepareMilkAndGeast;
+import com.gardhagen.joakim.bakery.bakingCommand.commands.SprinkleADollopOfCream;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.WhipThaCream;
 
 public class BakeingCake implements Command {
-// här ska det ändras om helt o hållet
+	
 	@Override
 	public void execute(Cakes cake) {
-		boolean done = false;
+		
 		BakingPipeline baking = new BakingPipeline();
 		if(cake.name.equals("Princess Cake")) {
 			baking.addCommand(new WhipThaCream());
@@ -28,28 +38,20 @@ public class BakeingCake implements Command {
 			baking.addCommand(new MarzipanRose());
 			baking.addCommand(new IcingSuger());
 		}
-//			do {for (String item : cake.ingredients) {
-//				if(item.contentEquals("Whiped Cream")) {
-//					baking.addCommand(new WhipThaCream());
-//				}
-//				if (item.contentEquals("Butter")) {
-//					baking.addCommand(new MeltButter());
-//				}
-//				if (item.contentEquals("Cake Base")) {
-//					baking.addCommand(new PrepareCakeBase());
-//				}
-//				if(item.contentEquals("Raspberry Jam")) {
-//					baking.addCommand(new ApplyRaspberryJam());
-//				}
-//				if(item.contentEquals("Vanilla Cream")) {
-//					baking.addCommand(new ApplyVanillaCream());
-//				}
-//				if (item.contentEquals("Icing Suger")) {
-//					baking.addCommand(new IcingSuger());
-//					done = true;
-//				}
-//			}
-//			} while (done!=true);
+		if(cake.name.equals("Choclate Cake")) {
+			baking.addCommand(new MeltButter());
+			baking.addCommand(new MixDryIngredients());
+			baking.addCommand(new AddMeltedButter());
+			baking.addCommand(new BatterInMold());
+			baking.addCommand(new Bake175Degree());
+		}
+		if(cake.name.equals("Shrovetide Bun")) {
+			baking.addCommand(new PrepareMilkAndGeast());
+			baking.addCommand(new AddRestOfFlourAndDryIngrediens());
+			baking.addCommand(new PrepareDough());
+			baking.addCommand(new CutBuns());
+			baking.addCommand(new SprinkleADollopOfCream());
+		}
 			baking.execute(cake);
 			cake.setBaked(true);
 		}
