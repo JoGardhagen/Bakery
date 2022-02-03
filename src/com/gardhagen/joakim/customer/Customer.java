@@ -16,9 +16,5 @@ public class Customer {
 		this.name = string;
 	}
 
-//	@Override
-//	public void update(Message msg) {
-//		System.out.println("Message is : " + msg.getMessage());
-//		
-//	}
+
 }

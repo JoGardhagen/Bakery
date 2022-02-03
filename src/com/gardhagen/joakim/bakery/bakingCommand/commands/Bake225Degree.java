@@ -10,7 +10,7 @@ public class Bake225Degree implements BakingCommand {
 	public String toString() {
 		return " " + bake225Degree + " ";
 	}
-
+ 
 	@Override
 	public Cakes process(Cakes cake) {
 		System.out.println(bake225Degree);

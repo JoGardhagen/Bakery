@@ -8,30 +8,25 @@ import com.gardhagen.joakim.customer.Customer;
 import com.gardhagen.joakim.customer.Subject;
 
 public class WigelsBakery extends Bakery implements Subject {
-//	Message msg = new Message();
 	public WigelsBakeryVD VD =new WigelsBakeryVD();
 	private List<Customer> customerList = new ArrayList<>(); 
 	private List<WigelsBakeryVD> VdList = new ArrayList<>();
 	
 	@Override
 	Cakes createCake(String item) {
-		attach(VD);
+		attach(VD); 
 		if(item.equals("Princess Cake")) {
-//			msg.setMessage(item);
 			
 			return new princessCake();
 		}
 		if(item.equals("Shrovetide Bun")) {
-//			msg.setMessage(item);
 		
 			return new ShrovetideBun();
 		}
 		if(item.equals("Choclate Cake")) {
-//			msg.setMessage(item);
 		
 			return new ChoclateCake();
 		}
-//		msg.setMessage(null);
 		return null;	
 	}
 	public void printCustomerList() {
@@ -54,7 +49,6 @@ public class WigelsBakery extends Bakery implements Subject {
 	}
 	@Override
 	public void notifyUpdate(String message) {
-//		 this.cakeDone = message ;
 		 for(WigelsBakeryVD vd : VdList) {
 			 vd.update(message);
 		 }

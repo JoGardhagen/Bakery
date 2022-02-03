@@ -9,7 +9,7 @@ public class ApplyMarzipanTop implements BakingCommand{
 	@Override
 	public String toString() {
 		return " " + applyMarzipanTop + " ";
-	}
+	} 
 
 	@Override
 	public Cakes process(Cakes cake) {

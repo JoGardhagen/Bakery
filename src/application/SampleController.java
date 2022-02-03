@@ -39,7 +39,7 @@ public class SampleController {
 //			orderLable.setText(BakingPipeline.super().cake.);
 			if(cake.isBaked()) {
 				wb.notifyUpdate(cakeDone);
-				orderIsDoneLabel.setText(wb.VD.message+" "+cake.getName());
+				orderIsDoneLabel.setText(wb.VD.message+" "+cake.getName()+", "+cust.getName());
 			}
 			
 		}
@@ -50,7 +50,7 @@ public class SampleController {
 			orderLable.setText(cust.getName() + " Ordered "+ cake.getName());
 			if(cake.isBaked()) {
 				wb.notifyUpdate(cakeDone);	
-				orderIsDoneLabel.setText(wb.VD.message+" "+cake.getName());
+				orderIsDoneLabel.setText(wb.VD.message+" "+cake.getName()+", "+cust.getName());
 			}
 		}
 		if(ShrovetideBun.isSelected()) {
@@ -60,7 +60,7 @@ public class SampleController {
 			orderLable.setText(cust.getName() + " Ordered "+ cake.getName());
 			if(cake.isBaked()) {
 				wb.notifyUpdate(cakeDone);
-				orderIsDoneLabel.setText(wb.VD.message+" "+cake.getName());
+				orderIsDoneLabel.setText(wb.VD.message+" "+cake.getName()+", "+cust.getName());
 			}
 		}
 	

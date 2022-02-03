@@ -1,8 +1,5 @@
 package com.gardhagen.joakim.bakery.cakes;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.gardhagen.joakim.bakery.bakingCommand.BakingPipeline;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.AddMeltedButter;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.AddRestOfFlourAndDryIngrediens;
@@ -10,7 +7,6 @@ import com.gardhagen.joakim.bakery.bakingCommand.commands.ApplyMarzipanTop;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.ApplyRaspberryJam;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.ApplyVanillaCream;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.Bake175Degree;
-import com.gardhagen.joakim.bakery.bakingCommand.commands.BakingIsDone;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.BatterInMold;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.CakeBaselayer;
 import com.gardhagen.joakim.bakery.bakingCommand.commands.CutBuns;
@@ -29,9 +25,9 @@ public class BakeingCake implements Command{
 	@Override 
 	public void execute(Cakes cake) {
 		
-		BakingPipeline baking = new BakingPipeline();
+		BakingPipeline baking = new BakingPipeline();// instans till baknings commado Pipeline, för att lägg till commandon
 		
-		if(cake.name.equals("Princess Cake")) {
+		if(cake.name.equals("Princess Cake")) {// lägger till commandon för PrinsessTårtan
 			baking.addCommand(new WhipThaCream());
 			baking.addCommand(new PrepareCakeBase());
 			baking.addCommand(new ApplyRaspberryJam());
@@ -41,24 +37,23 @@ public class BakeingCake implements Command{
 			baking.addCommand(new ApplyMarzipanTop());
 			baking.addCommand(new MarzipanRose());
 			baking.addCommand(new IcingSuger());
-//			baking.addCommand(new BakingIsDone());
 		}
-		if(cake.name.equals("Choclate Cake")) {
+		if(cake.name.equals("Choclate Cake")) {// lägger till commandon för Kladdkakan
 			baking.addCommand(new MeltButter());
 			baking.addCommand(new MixDryIngredients());
 			baking.addCommand(new AddMeltedButter());
 			baking.addCommand(new BatterInMold());
 			baking.addCommand(new Bake175Degree());
 		}
-		if(cake.name.equals("Shrovetide Bun")) {
+		if(cake.name.equals("Shrovetide Bun")) {// lägger till commandon för Semla
 			baking.addCommand(new PrepareMilkAndGeast());
 			baking.addCommand(new AddRestOfFlourAndDryIngrediens());
 			baking.addCommand(new PrepareDough());
 			baking.addCommand(new CutBuns());
 			baking.addCommand(new SprinkleADollopOfCream());
 		}
-			baking.execute(cake);
-			cake.setBaked(true);
+			baking.execute(cake);// utför commmandona från Pipelinen en efter en som lagt till i listan
+			cake.setBaked(true);// sist sätts kakan som klar men cake is baked = true
 		}
 		
 	}

@@ -2,7 +2,7 @@ package com.gardhagen.joakim.bakery.cakes;
 
 public class ChoclateCake extends Cakes{
 	
-	public ChoclateCake() {
+	public ChoclateCake() { 
 		name = "Choclate Cake";
 		
 		ingredients.add("Butter");

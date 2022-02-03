@@ -9,7 +9,7 @@ public class CutBuns implements BakingCommand{
 	
 	@Override
 	public String toString() {
-		return " " + cutBuns + " ";
+		return " " + cutBuns + " "; 
 	}
 
 	@Override

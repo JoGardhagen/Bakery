@@ -3,12 +3,12 @@ package com.gardhagen.joakim.bakery.bakingCommand.commands;
 import com.gardhagen.joakim.bakery.bakingCommand.BakingCommand;
 import com.gardhagen.joakim.bakery.cakes.Cakes;
 
-public class AddMeltedButter implements BakingCommand{
+public class AddMeltedButter implements BakingCommand{ 
 	String addMeltedButter = "Add the melted butter to the mix";
 	
 	@Override
 	public String toString() {
-		return " " + addMeltedButter + " ";
+		return " " + addMeltedButter + " "; 
 	}
 
 	@Override

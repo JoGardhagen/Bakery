@@ -9,7 +9,7 @@ public class MixDryIngredients implements BakingCommand{
 	@Override
 	public String toString() {
 		return " " + mixDryIngredients + " ";
-	}
+	} 
 
 	@Override
 	public Cakes process(Cakes cake) {

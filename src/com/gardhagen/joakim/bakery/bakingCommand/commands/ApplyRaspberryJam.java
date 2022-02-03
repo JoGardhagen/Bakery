@@ -8,7 +8,7 @@ public class ApplyRaspberryJam implements BakingCommand{
 	
 	@Override
 	public String toString() {
-		return " " + applyRaspberryJam + " ";
+		return " " + applyRaspberryJam + " "; 
 	}
 	@Override
 	public Cakes process(Cakes cake) {

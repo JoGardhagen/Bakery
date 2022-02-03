@@ -9,7 +9,7 @@ public class SprinkleADollopOfCream implements BakingCommand{
 	
 	@Override
 	public String toString() {
-		return " " + sprinkleADollopOfCream + " ";
+		return " " + sprinkleADollopOfCream + " "; 
 	}
 
 	@Override

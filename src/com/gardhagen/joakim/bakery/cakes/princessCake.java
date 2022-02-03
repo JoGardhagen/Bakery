@@ -2,7 +2,7 @@ package com.gardhagen.joakim.bakery.cakes;
 
 public class princessCake extends Cakes {
 	
-	public princessCake() {
+	public princessCake() { 
 		name = "Princess Cake";
 		
 		ingredients.add("Cake Base");

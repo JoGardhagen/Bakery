@@ -1,14 +1,13 @@
 package com.gardhagen.joakim.bakery.cakes;
 
-public abstract class Bakery {
+public abstract class Bakery {// abstarct fabrik detta ärvs av WigelsBakery klassen
 	
 	public Cakes orderCake(String type) {
-		BakeingCake bake = new BakeingCake();
+		BakeingCake bake = new BakeingCake();// instans för att baka en kaka 
 		Cakes cake;
-		cake = createCake(type);
-//		cake.prepare();
+		cake = createCake(type);// väljer ut kaka som skall bakas
 		
-		bake.execute(cake);	
+		bake.execute(cake);	// Anropar att exekvera kaka för att bakas 
 		if(cake.isBaked()==true) { 
 			return cake;
 		}

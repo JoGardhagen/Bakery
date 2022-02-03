@@ -5,17 +5,11 @@ import java.util.List;
 
 public abstract class Cakes {
 	
-	private boolean baked = false;
+	private boolean baked = false; 
 	
 	String name;
 	List<String> ingredients = new ArrayList<>();
-	
-//	void prepare() {
-//		System.out.println("Preparing "+name);
-//		for(String ingridient : ingredients) {
-//			System.out.println(" "+ ingridient);
-//		}
-//	}
+
 	public String getName() {
 		return name;
 	}

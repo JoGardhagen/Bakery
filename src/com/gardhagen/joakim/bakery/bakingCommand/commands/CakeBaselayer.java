@@ -9,7 +9,7 @@ public class CakeBaselayer implements BakingCommand{
 	
 	@Override
 	public String toString() {
-		return " " + applyCakelayer + " ";
+		return " " + applyCakelayer + " "; 
 	}
 
 

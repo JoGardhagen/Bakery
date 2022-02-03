@@ -10,7 +10,7 @@ public class PortionOutWhippedCream implements BakingCommand{
 	public String toString() {
 		return " " + portionOutWhippedCream + " ";
 	}
-
+ 
 	@Override
 	public Cakes process(Cakes cake) {
 		System.out.println(portionOutWhippedCream);

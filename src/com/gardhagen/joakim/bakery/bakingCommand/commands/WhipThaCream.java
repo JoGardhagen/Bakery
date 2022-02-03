@@ -8,7 +8,7 @@ public class WhipThaCream implements BakingCommand{
 
 	@Override
 	public String toString() {
-		return " " + whipThaCream + " ";
+		return " " + whipThaCream + " "; 
 	}
 
 	@Override

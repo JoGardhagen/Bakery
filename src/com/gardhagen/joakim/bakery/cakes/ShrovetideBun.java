@@ -3,7 +3,7 @@ package com.gardhagen.joakim.bakery.cakes;
 public class ShrovetideBun extends Cakes {
 
 	public ShrovetideBun() {
-		name = "Shrovetide Bun";
+		name = "Shrovetide Bun"; 
 
 		ingredients.add("Milk");
 		ingredients.add("Geast");
